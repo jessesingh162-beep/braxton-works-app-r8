@@ -32,7 +32,7 @@ export async function sendNewJobEmail(params: NewJobEmailParams) {
   const html = `
     <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px">
       <h2 style="margin:0 0 4px">New ${params.type === "issue" ? "Issue" : "Enquiry"} — ${params.category}</h2>
-      <p style="color:#64748b;margin:0 0 24px">Submitted via Braxton Works app</p>
+      <p style="color:#64748b;margin:0 0 24px">Submitted via Build.me app</p>
 
       <table style="width:100%;border-collapse:collapse">
         <tr><td style="padding:8px 0;color:#64748b;width:160px">Name</td><td style="padding:8px 0;font-weight:600">${params.name}</td></tr>
@@ -60,7 +60,7 @@ export async function sendNewJobEmail(params: NewJobEmailParams) {
 
   const resend = getResend()
   await resend.emails.send({
-    from: "Braxton Works <noreply@braxtonworks.co.uk>",
+    from: "Build.me <noreply@braxtonworks.co.uk>",
     to: process.env.ADMIN_EMAIL!,
     subject: `New ${params.type === "issue" ? "Issue" : "Enquiry"} — ${params.category} — ${params.name}`,
     html,

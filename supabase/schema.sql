@@ -1,5 +1,5 @@
 -- ============================================================
--- Braxton Works — Phase 1 Schema
+-- Build.me — Phase 1 Schema
 -- Run this in the Supabase SQL Editor (once, on a fresh project)
 -- ============================================================
 

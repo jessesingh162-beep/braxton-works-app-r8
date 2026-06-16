@@ -22,14 +22,14 @@ export function HomeScreen() {
           <div className="h-14 w-14 rounded-2xl overflow-hidden premium-shadow">
             <Image 
               src="/images/braxton-logo.jpg" 
-              alt="Braxton Works" 
+              alt="Build.me" 
               width={56} 
               height={56}
               className="w-full h-full object-cover"
             />
           </div>
           <div>
-            <h1 className="text-xl font-semibold text-[#1E1E1E] tracking-tight">Braxton Works</h1>
+            <h1 className="text-xl font-semibold text-[#1E1E1E] tracking-tight">Build.me</h1>
             <p className="text-sm text-[#64748B]">Property Services</p>
           </div>
         </div>
@@ -76,13 +76,13 @@ export function HomeScreen() {
           <div className="h-20 w-20 rounded-2xl overflow-hidden mb-5">
             <Image 
               src="/images/braxton-logo.jpg" 
-              alt="Braxton Works" 
+              alt="Build.me" 
               width={80} 
               height={80}
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-white text-xl font-semibold">Braxton Works</p>
+          <p className="text-white text-xl font-semibold">Build.me</p>
           <p className="text-white/40 text-sm mt-2">Property Services</p>
         </div>
       </div>
@@ -92,7 +92,7 @@ export function HomeScreen() {
         <div className="glass-card rounded-3xl p-7">
           <h2 className="text-lg font-semibold text-[#1E1E1E] mb-4">About Us</h2>
           <p className="text-[#64748B] leading-relaxed text-[15px]">
-            Braxton Works is your single point of contact for all property maintenance and improvement needs. 
+            Build.me is your single point of contact for all property maintenance and improvement needs. 
             We handle everything from emergency repairs to full renovations, connecting you with trusted, 
             vetted professionals while managing the entire process.
           </p>

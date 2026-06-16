@@ -42,7 +42,7 @@ export function MessagesScreen() {
       {/* Header */}
       <div className="px-6 pt-14 pb-4 glass-nav">
         <h1 className="text-2xl font-semibold text-[#1E1E1E] tracking-tight">Messages</h1>
-        <p className="text-sm text-[#64748B] mt-1">Chat with Braxton Works</p>
+        <p className="text-sm text-[#64748B] mt-1">Chat with Build.me</p>
       </div>
 
       {/* Messages */}
