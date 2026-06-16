@@ -28,56 +28,56 @@ export function ContactScreen() {
       <div className="px-6 pt-8 pb-6">
         <button
           onClick={() => setCurrentScreen("timing")}
-          className="flex items-center gap-2 text-[#64748B] hover:text-[#1E1E1E] mb-8 transition-colors"
+          className="flex items-center gap-2 text-[#94A3B8] hover:text-white mb-8 transition-colors"
         >
           <ArrowLeft className="h-5 w-5" />
           <span className="text-sm font-medium">Back</span>
         </button>
-        <h1 className="text-2xl font-semibold text-[#1E1E1E] tracking-tight">Your contact details</h1>
-        <p className="text-[#64748B] mt-3 text-base">How can we reach you?</p>
+        <h1 className="text-2xl font-semibold text-white tracking-tight">Your contact details</h1>
+        <p className="text-[#94A3B8] mt-3 text-base">How can we reach you?</p>
       </div>
 
       {/* Form */}
       <div className="px-6 space-y-6">
         {/* Name */}
         <div>
-          <label className="text-xs font-semibold text-[#64748B] mb-3 block uppercase tracking-wide">Name</label>
+          <label className="text-xs font-semibold text-[#94A3B8] mb-3 block uppercase tracking-wide">Name</label>
           <input
             type="text"
             value={inquiryData.name}
             onChange={(e) => setInquiryData({ ...inquiryData, name: e.target.value })}
             placeholder="Your full name"
-            className="w-full p-4 rounded-xl glass-input text-[#1E1E1E] placeholder:text-[#94A3B8] focus:outline-none text-[15px]"
+            className="w-full p-4 rounded-xl glass-input text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none text-[15px]"
           />
         </div>
 
         {/* Address */}
         <div>
-          <label className="text-xs font-semibold text-[#64748B] mb-3 block uppercase tracking-wide">Address</label>
+          <label className="text-xs font-semibold text-[#94A3B8] mb-3 block uppercase tracking-wide">Address</label>
           <input
             type="text"
             value={inquiryData.address}
             onChange={(e) => setInquiryData({ ...inquiryData, address: e.target.value })}
             placeholder="Property address"
-            className="w-full p-4 rounded-xl glass-input text-[#1E1E1E] placeholder:text-[#94A3B8] focus:outline-none text-[15px]"
+            className="w-full p-4 rounded-xl glass-input text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none text-[15px]"
           />
         </div>
 
         {/* Phone */}
         <div>
-          <label className="text-xs font-semibold text-[#64748B] mb-3 block uppercase tracking-wide">Phone number</label>
+          <label className="text-xs font-semibold text-[#94A3B8] mb-3 block uppercase tracking-wide">Phone number</label>
           <input
             type="tel"
             value={inquiryData.phone}
             onChange={(e) => setInquiryData({ ...inquiryData, phone: e.target.value })}
             placeholder="Your phone number"
-            className="w-full p-4 rounded-xl glass-input text-[#1E1E1E] placeholder:text-[#94A3B8] focus:outline-none text-[15px]"
+            className="w-full p-4 rounded-xl glass-input text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none text-[15px]"
           />
         </div>
 
         {/* Contact Preference */}
         <div>
-          <label className="text-xs font-semibold text-[#64748B] mb-4 block uppercase tracking-wide">
+          <label className="text-xs font-semibold text-[#94A3B8] mb-4 block uppercase tracking-wide">
             Contact preference
           </label>
           <div className="grid grid-cols-3 gap-3">
@@ -91,8 +91,8 @@ export function ContactScreen() {
                     : "glass-button"
                 }`}
               >
-                <option.icon className={`h-5 w-5 ${inquiryData.contactPreference === option.id ? "text-white" : "text-[#64748B]"}`} />
-                <span className={`text-xs font-medium ${inquiryData.contactPreference === option.id ? "text-white" : "text-[#64748B]"}`}>
+                <option.icon className={`h-5 w-5 ${inquiryData.contactPreference === option.id ? "text-[#0F172A]" : "text-[#64748B]"}`} />
+                <span className={`text-xs font-medium ${inquiryData.contactPreference === option.id ? "text-[#0F172A]" : "text-[#64748B]"}`}>
                   {option.label}
                 </span>
               </button>

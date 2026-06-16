@@ -79,10 +79,10 @@ export function AuthScreen() {
       <div className="px-6 pt-16 pb-6 flex-1 flex flex-col justify-center">
         <div className="text-center mb-10">
           <div className="h-20 w-20 rounded-2xl glass-card flex items-center justify-center mx-auto mb-6">
-            <UserPlus className="h-10 w-10 text-[#6EC6FF]" />
+            <UserPlus className="h-10 w-10 text-[#F59E0B]" />
           </div>
-          <h1 className="text-2xl font-semibold text-[#1E1E1E] tracking-tight">Almost there!</h1>
-          <p className="text-[#64748B] mt-3 max-w-xs mx-auto leading-relaxed text-[15px]">
+          <h1 className="text-2xl font-semibold text-white tracking-tight">Almost there!</h1>
+          <p className="text-[#94A3B8] mt-3 max-w-xs mx-auto leading-relaxed text-[15px]">
             Create an account to track your inquiry and receive updates
           </p>
         </div>

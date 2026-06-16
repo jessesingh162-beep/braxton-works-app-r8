@@ -11,12 +11,12 @@ const ACTIVE_STATUSES:   JobStatus[] = ["New", "Quoted", "Booked", "In Progress"
 const COMPLETE_STATUSES: JobStatus[] = ["Complete", "Cancelled"]
 
 const statusConfig: Record<JobStatus, { icon: typeof AlertCircle; color: string; label: string }> = {
-  "New":         { icon: AlertCircle,   color: "text-amber-500 bg-amber-50",        label: "New"         },
-  "Quoted":      { icon: FileText,      color: "text-purple-500 bg-purple-50",      label: "Quoted"      },
-  "Booked":      { icon: CalendarCheck, color: "text-blue-500 bg-blue-50",          label: "Booked"      },
-  "In Progress": { icon: Clock,         color: "text-[#6EC6FF] bg-[#E3F3FF]",       label: "In Progress" },
-  "Complete":    { icon: CheckCircle,   color: "text-emerald-500 bg-emerald-50",    label: "Complete"    },
-  "Cancelled":   { icon: XCircle,       color: "text-slate-400 bg-slate-100",       label: "Cancelled"   },
+  "New":         { icon: AlertCircle,   color: "text-[#B45309] bg-[#FEF3C7]",       label: "New"         },
+  "Quoted":      { icon: FileText,      color: "text-[#0F172A] bg-[#E2E8F0]",       label: "Quoted"      },
+  "Booked":      { icon: CalendarCheck, color: "text-[#0F172A] bg-[#E2E8F0]",       label: "Booked"      },
+  "In Progress": { icon: Clock,         color: "text-[#B45309] bg-[#FEF3C7]",       label: "In Progress" },
+  "Complete":    { icon: CheckCircle,   color: "text-[#10B981] bg-[#D1FAE5]",       label: "Complete"    },
+  "Cancelled":   { icon: XCircle,       color: "text-[#EF4444] bg-[#FEE2E2]",       label: "Cancelled"   },
 }
 
 function mapApiJobToJob(raw: Record<string, unknown>): Job {
@@ -68,7 +68,7 @@ export function JobsScreen() {
     <div className="min-h-screen pb-28">
       {/* Header */}
       <div className="px-6 pt-14 pb-6">
-        <h1 className="text-2xl font-semibold text-[#1E1E1E] tracking-tight">My Jobs</h1>
+        <h1 className="text-2xl font-semibold text-white tracking-tight">My Jobs</h1>
       </div>
 
       {/* Tabs */}
@@ -80,7 +80,7 @@ export function JobsScreen() {
               onClick={() => setActiveTab(tab)}
               className={cn(
                 "flex-1 py-3 text-sm font-medium rounded-lg transition-all duration-200",
-                activeTab === tab ? "bg-white text-[#1E1E1E] shadow-sm" : "text-[#64748B]"
+                activeTab === tab ? "bg-[#F59E0B] text-[#0F172A] shadow-sm" : "text-[#64748B]"
               )}
             >
               {tab === "active" ? "Active" : "Completed"}
@@ -93,11 +93,11 @@ export function JobsScreen() {
       <div className="px-6 space-y-3">
         {loading ? (
           <div className="text-center py-16">
-            <p className="text-[#64748B]">Loading jobs...</p>
+            <p className="text-[#94A3B8]">Loading jobs...</p>
           </div>
         ) : filteredJobs.length === 0 ? (
           <div className="text-center py-16">
-            <p className="text-[#64748B]">No {activeTab} jobs</p>
+            <p className="text-[#94A3B8]">No {activeTab} jobs</p>
           </div>
         ) : (
           filteredJobs.map((job) => {
@@ -120,7 +120,7 @@ export function JobsScreen() {
                     <span className="text-xs text-[#94A3B8]">•</span>
                     <span className="text-xs text-[#64748B]">{job.category}</span>
                   </div>
-                  <p className="text-[#1E1E1E] font-medium truncate text-[15px]">{job.description}</p>
+                  <p className="text-[#0F172A] font-medium truncate text-[15px]">{job.description}</p>
                   <div className="flex items-center gap-2 mt-1.5">
                     <span className={cn("text-xs font-medium", cfg.color.split(" ")[0])}>
                       {cfg.label}
