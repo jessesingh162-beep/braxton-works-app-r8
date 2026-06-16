@@ -4,50 +4,54 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #F8FAFB;
-  --foreground: #1E1E1E;
+  --background: #0F172A;
+  --foreground: #F1F5F9;
   --card: #FFFFFF;
-  --card-foreground: #1E1E1E;
+  --card-foreground: #0F172A;
   --popover: #FFFFFF;
-  --popover-foreground: #1E1E1E;
-  --primary: #6EC6FF;
-  --primary-hover: #5BB8F5;
-  --primary-foreground: #FFFFFF;
-  --secondary: #4BA3D9;
-  --secondary-foreground: #FFFFFF;
-  --muted: #F1F5F8;
-  --muted-foreground: #64748B;
-  --accent: #E3F3FF;
-  --accent-foreground: #4BA3D9;
+  --popover-foreground: #0F172A;
+  --primary: #F59E0B;
+  --primary-hover: #D97706;
+  --primary-foreground: #0F172A;
+  --secondary: #1E293B;
+  --secondary-foreground: #F1F5F9;
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+  --accent: #F59E0B;
+  --accent-foreground: #0F172A;
+  --success: #10B981;
+  --success-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
-  --border: #E8ECF0;
-  --input: #E8ECF0;
-  --ring: #6EC6FF;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #F59E0B;
   --radius: 1rem;
 }
 
 .dark {
-  --background: #0F1419;
-  --foreground: #F1F5F8;
-  --card: #1A1F26;
-  --card-foreground: #F1F5F8;
-  --popover: #1A1F26;
-  --popover-foreground: #F1F5F8;
-  --primary: #6EC6FF;
-  --primary-hover: #5BB8F5;
-  --primary-foreground: #0F1419;
-  --secondary: #4BA3D9;
-  --secondary-foreground: #F1F5F8;
-  --muted: #1A1F26;
+  --background: #0F172A;
+  --foreground: #F1F5F9;
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  --popover: #FFFFFF;
+  --popover-foreground: #0F172A;
+  --primary: #F59E0B;
+  --primary-hover: #D97706;
+  --primary-foreground: #0F172A;
+  --secondary: #1E293B;
+  --secondary-foreground: #F1F5F9;
+  --muted: #1E293B;
   --muted-foreground: #94A3B8;
-  --accent: #1E3448;
-  --accent-foreground: #6EC6FF;
+  --accent: #F59E0B;
+  --accent-foreground: #0F172A;
+  --success: #10B981;
+  --success-foreground: #FFFFFF;
   --destructive: #EF4444;
-  --destructive-foreground: #F1F5F8;
-  --border: #2A3441;
-  --input: #2A3441;
-  --ring: #6EC6FF;
+  --destructive-foreground: #FFFFFF;
+  --border: #1E293B;
+  --input: #1E293B;
+  --ring: #F59E0B;
 }
 
 @theme inline {
@@ -67,6 +71,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -88,84 +94,78 @@
 }
 
 @layer utilities {
-  /* Premium Glass Effects */
+  /* Solid white content cards */
   .glass {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: #FFFFFF;
+    border: 1px solid rgba(15, 23, 42, 0.08);
   }
-  
+
   .glass-card {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 24px -4px rgba(110, 198, 255, 0.08);
+    background: #FFFFFF;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 4px 24px -6px rgba(15, 23, 42, 0.18);
   }
-  
+
+  /* Secondary / neutral surface buttons (work on navy or white) */
   .glass-button {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(110, 198, 255, 0.25);
+    background: #F1F5F9;
+    border: 1px solid rgba(15, 23, 42, 0.08);
     transition: all 0.2s ease;
   }
-  
+
   .glass-button:hover {
-    background: rgba(255, 255, 255, 0.8);
-    border-color: rgba(110, 198, 255, 0.4);
-    box-shadow: 0 0 20px -4px rgba(110, 198, 255, 0.3);
+    background: #E2E8F0;
+    border-color: rgba(15, 23, 42, 0.15);
   }
-  
+
+  /* Primary CTA: amber with dark navy text */
   .glass-button-primary {
-    background: rgba(110, 198, 255, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
+    background: #F59E0B;
+    border: 1px solid #F59E0B;
+    color: #0F172A;
     transition: all 0.2s ease;
   }
-  
+
   .glass-button-primary:hover {
-    background: rgba(110, 198, 255, 0.95);
-    box-shadow: 0 0 24px -4px rgba(110, 198, 255, 0.5);
+    background: #D97706;
+    border-color: #D97706;
+    box-shadow: 0 6px 20px -6px rgba(245, 158, 11, 0.55);
   }
-  
+
+  /* Navy translucent bars (bottom nav, sticky headers) */
   .glass-nav {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(15, 23, 42, 0.88);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border-top: 1px solid rgba(110, 198, 255, 0.15);
-    box-shadow: 0 -4px 32px -8px rgba(110, 198, 255, 0.1);
+    border-top: 1px solid rgba(245, 158, 11, 0.18);
+    box-shadow: 0 -4px 32px -8px rgba(0, 0, 0, 0.4);
   }
-  
+
+  /* White input fields */
   .glass-input {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(110, 198, 255, 0.2);
+    background: #FFFFFF;
+    border: 1px solid rgba(15, 23, 42, 0.12);
     transition: all 0.2s ease;
   }
-  
+
   .glass-input:focus {
-    background: rgba(255, 255, 255, 0.9);
-    border-color: rgba(110, 198, 255, 0.5);
-    box-shadow: 0 0 0 3px rgba(110, 198, 255, 0.1);
+    background: #FFFFFF;
+    border-color: #F59E0B;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.18);
   }
 
   /* Premium Shadows */
   .premium-shadow {
-    box-shadow: 0 4px 16px -4px rgba(110, 198, 255, 0.2);
-  }
-  
-  .premium-shadow-lg {
-    box-shadow: 0 8px 32px -8px rgba(110, 198, 255, 0.25);
+    box-shadow: 0 4px 16px -4px rgba(15, 23, 42, 0.35);
   }
 
-  /* Background */
+  .premium-shadow-lg {
+    box-shadow: 0 8px 32px -8px rgba(15, 23, 42, 0.45);
+  }
+
+  /* Navy app background */
   .app-background {
-    background: linear-gradient(180deg, #F8FAFB 0%, #F1F5F8 100%);
+    background: linear-gradient(180deg, #0F172A 0%, #0B1120 100%);
     min-height: 100vh;
   }
 

@@ -46,13 +46,13 @@ export function CategoryScreen() {
       <div className="px-6 pt-8 pb-6">
         <button
           onClick={() => setCurrentScreen("inquiry-type")}
-          className="flex items-center gap-2 text-[#64748B] hover:text-[#1E1E1E] mb-8 transition-colors"
+          className="flex items-center gap-2 text-[#94A3B8] hover:text-white mb-8 transition-colors"
         >
           <ArrowLeft className="h-5 w-5" />
           <span className="text-sm font-medium">Back</span>
         </button>
-        <h1 className="text-2xl font-semibold text-[#1E1E1E] tracking-tight">{title}</h1>
-        <p className="text-[#64748B] mt-3 text-base">Select a category</p>
+        <h1 className="text-2xl font-semibold text-white tracking-tight">{title}</h1>
+        <p className="text-[#94A3B8] mt-3 text-base">Select a category</p>
       </div>
 
       {/* Categories Grid */}
@@ -63,10 +63,10 @@ export function CategoryScreen() {
             onClick={() => handleSelect(cat.label)}
             className="p-5 flex flex-col items-center gap-3 rounded-2xl glass-card transition-all duration-200 active:scale-[0.98]"
           >
-            <div className="h-12 w-12 rounded-xl bg-[#E3F3FF] flex items-center justify-center">
-              <cat.icon className="h-5 w-5 text-[#4BA3D9]" />
+            <div className="h-12 w-12 rounded-xl bg-[#F59E0B] flex items-center justify-center">
+              <cat.icon className="h-5 w-5 text-[#0F172A]" />
             </div>
-            <span className="text-sm font-medium text-[#1E1E1E] text-center">{cat.label}</span>
+            <span className="text-sm font-medium text-[#0F172A] text-center">{cat.label}</span>
           </button>
         ))}
       </div>

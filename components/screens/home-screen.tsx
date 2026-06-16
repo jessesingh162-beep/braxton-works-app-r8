@@ -22,22 +22,22 @@ export function HomeScreen() {
           <div className="h-14 w-14 rounded-2xl overflow-hidden premium-shadow">
             <Image 
               src="/images/braxton-logo.jpg" 
-              alt="Braxton Works" 
+              alt="Build.me" 
               width={56} 
               height={56}
               className="w-full h-full object-cover"
             />
           </div>
           <div>
-            <h1 className="text-xl font-semibold text-[#1E1E1E] tracking-tight">Braxton Works</h1>
-            <p className="text-sm text-[#64748B]">Property Services</p>
+            <h1 className="text-xl font-semibold text-white tracking-tight">Build.me</h1>
+            <p className="text-sm text-[#94A3B8]">Property Services</p>
           </div>
         </div>
       </div>
 
       {/* Tagline */}
       <div className="px-6 mb-12">
-        <p className="text-[#64748B] text-lg leading-relaxed max-w-sm">
+        <p className="text-[#CBD5E1] text-lg leading-relaxed max-w-sm">
           Anything that needs doing, we sort it.
         </p>
       </div>
@@ -49,10 +49,10 @@ export function HomeScreen() {
           <div className="space-y-5">
             {services.map((service, i) => (
               <div key={i} className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-xl bg-[#E3F3FF] flex items-center justify-center">
-                  <service.icon className="h-5 w-5 text-[#4BA3D9]" />
+                <div className="h-12 w-12 rounded-xl bg-[#F59E0B] flex items-center justify-center">
+                  <service.icon className="h-5 w-5 text-[#0F172A]" />
                 </div>
-                <span className="text-[#1E1E1E] font-medium text-[15px]">{service.label}</span>
+                <span className="text-[#0F172A] font-medium text-[15px]">{service.label}</span>
               </div>
             ))}
           </div>
@@ -76,13 +76,13 @@ export function HomeScreen() {
           <div className="h-20 w-20 rounded-2xl overflow-hidden mb-5">
             <Image 
               src="/images/braxton-logo.jpg" 
-              alt="Braxton Works" 
+              alt="Build.me" 
               width={80} 
               height={80}
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-white text-xl font-semibold">Braxton Works</p>
+          <p className="text-white text-xl font-semibold">Build.me</p>
           <p className="text-white/40 text-sm mt-2">Property Services</p>
         </div>
       </div>
@@ -90,9 +90,9 @@ export function HomeScreen() {
       {/* About Section */}
       <div className="px-6 pb-8">
         <div className="glass-card rounded-3xl p-7">
-          <h2 className="text-lg font-semibold text-[#1E1E1E] mb-4">About Us</h2>
+          <h2 className="text-lg font-semibold text-[#0F172A] mb-4">About Us</h2>
           <p className="text-[#64748B] leading-relaxed text-[15px]">
-            Braxton Works is your single point of contact for all property maintenance and improvement needs. 
+            Build.me is your single point of contact for all property maintenance and improvement needs. 
             We handle everything from emergency repairs to full renovations, connecting you with trusted, 
             vetted professionals while managing the entire process.
           </p>

@@ -53,7 +53,7 @@ function AppContent() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAFB] max-w-lg mx-auto relative">
+    <div className="min-h-screen bg-[#0F172A] max-w-lg mx-auto relative">
       {renderScreen()}
       <BottomNav />
     </div>

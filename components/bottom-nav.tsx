@@ -28,13 +28,13 @@ export function BottomNav() {
               className={cn(
                 "flex flex-col items-center justify-center gap-1 px-4 py-2 min-w-[64px] rounded-xl transition-all duration-200",
                 isActive 
-                  ? "text-[#6EC6FF]" 
-                  : "text-[#94A3B8] hover:text-[#64748B]"
+                  ? "text-[#F59E0B]" 
+                  : "text-[#94A3B8] hover:text-[#E2E8F0]"
               )}
             >
               <div className={cn(
                 "p-2 rounded-xl transition-all duration-200",
-                isActive && "bg-[#E3F3FF]"
+                isActive && "bg-[#F59E0B]/15"
               )}>
                 <item.icon 
                   className="h-5 w-5" 

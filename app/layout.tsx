@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Braxton Works - Property Services',
+  title: 'Build.me - Property Services',
   description: 'Anything that needs doing, we sort it. Premium managed property services for homeowners, landlords, and tenants.',
   generator: 'v0.app',
   icons: {
@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-[#F8FAFB]">
+    <html lang="en" className="bg-[#0F172A]">
       <body className="font-sans antialiased app-background">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

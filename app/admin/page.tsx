@@ -178,7 +178,7 @@ export default function AdminDashboard() {
             <span className="text-primary-foreground font-bold text-lg">B</span>
           </div>
           <div>
-            <h1 className="text-xl font-bold text-foreground">Braxton Works</h1>
+            <h1 className="text-xl font-bold text-foreground">Build.me</h1>
             <p className="text-sm text-muted-foreground">Admin Dashboard</p>
           </div>
         </div>
